@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  flask-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.flask
+    container_name: flask-app
+    volumes:
+      - .:/app
+    ports:
+      - "5000:5000"
+    networks:
+      - app-network
+
+  php-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.php
+    container_name: php-app
+    volumes:
+      - .:/var/www/html
+    ports:
+      - "8085:80"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
