@@ -56,5 +56,7 @@ docker-compose up --build
 ```
 
 ### Access the Application
-  Flask Backend: http://localhost:5000
-  PHP Frontend: http://localhost:8085
+
+Flask Backend: http://localhost:5000
+
+PHP Frontend: http://localhost:8085
